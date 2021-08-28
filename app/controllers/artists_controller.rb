@@ -1,8 +1,12 @@
 class ArtistsController < ApplicationController
   def index
+    #plural instance identifier
+    @artists = Artist.all
   end
 
   def show
+    #this is usually always the same as the edit
+    @artist = Artist.find(params[:id])
   end
 
   def new

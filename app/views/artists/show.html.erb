@@ -1,0 +1,14 @@
+<!--Artists show page links to the artist's songs by title-->
+<h1> <%= @artist.name%></h1>
+
+<ul>
+    <% @artist.songs.each do |song| %>
+    <li>
+        <%= link_to song.title, song_path(song)%>
+    </li>
+<% end %>
+</ul>
+
+<!--Print out the artists name-->
+<!--Take the artists songs and iterate over each song-->
+<!--Link the song to the title, then point it to the song path-->
